@@ -239,13 +239,16 @@ section.full-hight {
 
 .epfl-logo {
   text-decoration: none;
-  font-size: 22px;
-  line-height: 22px;
-  vertical-align: middle;
 }
 
 .epfl-logo-img {
   height: 20px;
+}
+
+.epfl-logo-text {
+  font-size: 22px;
+  line-height: 22px;
+  vertical-align: middle;
 }
 
 .info-block {
