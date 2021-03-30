@@ -152,6 +152,9 @@ footer a {
   bottom: 0;
   width: 4rem;
   background-color: rgba(255, 201, 12, 20%);
+  background-image: url('/images/icons/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .cta-btn.cta-btn-yellow>.arrow {
@@ -179,7 +182,7 @@ section {
 .section-content {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 4rem 2rem;
 }
 
 section.full-hight {
@@ -254,25 +257,40 @@ section.full-hight {
 .info-block {
   position: relative;
   background-color: #f7f8fc;
-  padding: 1rem 2rem;
+  padding: 1rem 2rem 2rem 1rem;
   color: #393745;
 }
 .info-block a {
   color: #393745;
 }
 
-.info-block-img-right {
-  height: 4rem;
+.info-block-img-right, .info-block-img-left {
+  height: 2.4rem;
   position: absolute;
-  top: -2rem;
+  top: -1rem;
+}
+
+.info-block-img-right {
   right: -2rem;
 }
 
 .info-block-img-left {
-  height: 4rem;
-  position: absolute;
-  top: -2rem;
   left: -2rem;
+}
+
+@media only screen and (min-width: 64em) {
+  .info-block-img-right, .info-block-img-left {
+    height: 3.2rem;
+    top: -1.5rem;
+  }
+
+  .info-block-img-right {
+    right: -2.5rem;
+  }
+
+  .info-block-img-left {
+    left: -2.5rem;
+  }
 }
 
 .resource-block {
