@@ -8,7 +8,7 @@
 
   <title>HippocampusHub</title>
 
-  <link rel="shortcut icon" href="https://hippocampushub.eu/favicon.ico">
+  <link rel="shortcut icon" href="https://www.hippocampushub.eu/favicon.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://www.hippocampushub.eu/shared_css/main.min.css"/>
@@ -381,5 +381,74 @@
       </div>
     </div>
   </footer>
+
+  <div class="cookie-modal hidden">
+    <div class="row end-sm middle-xs">
+      <div class="col-xs-12 col-md-6 col-lg-8 mt-2">
+        We use cookies to improve user experience and analyze website traffic. Read the
+        <a
+          href="https://www.epfl.ch/about/presidency/presidents-team/legal-affairs/epfl-privacy-policy/cookies-policy/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Cookies policy</a>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mt-2">
+        <button
+          id="disallowCookies"
+          class="cta-btn cta-btn-grey block"
+        >
+          Don't allow
+          <div class="arrow"></div>
+        </button>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 mt-2">
+        <button
+          id="allowCookies"
+          class="cta-btn block"
+        >
+          Allow
+          <div class="arrow"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGZ83Y6E8H"></script>
+
+  <script>
+    const DATA_LAYER = 'dataLayer';
+    const PREFS_KEY = 'bbpCookiePreferences';
+    const GTM_ID = 'G-SGZ83Y6E8H';
+
+    const savedCookiePreferences = localStorage.getItem(PREFS_KEY);
+
+    function initGtm() {
+      window[DATA_LAYER] = window[DATA_LAYER] || [];
+      function gtag() {window[DATA_LAYER].push(arguments);}
+      gtag('js', new Date());
+      gtag('config', GTM_ID, { 'anonymize_ip': true });
+    }
+
+    function initModal() {
+      document.getElementById('allowCookies').addEventListener('click', () => {
+        localStorage.setItem(PREFS_KEY, JSON.stringify({ cookies: true }));
+        document.querySelector('.cookie-modal').classList.add('hidden');
+        initGtm();
+      });
+
+      document.getElementById('disallowCookies').addEventListener('click', () => {
+        localStorage.setItem(PREFS_KEY, JSON.stringify({ cookies: false }));
+        document.querySelector('.cookie-modal').classList.add('hidden');
+      });
+
+      document.querySelector('.cookie-modal').classList.remove('hidden');
+    }
+
+    if (savedCookiePreferences && JSON.parse(savedCookiePreferences).cookies) {
+      initGtm();
+    } else {
+      initModal();
+    }
+  </script>
 </body>
 </html>

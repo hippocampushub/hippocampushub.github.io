@@ -129,6 +129,14 @@ footer a {
   padding: 0 6rem 0 2rem;
   border-radius: 2px;
   transition: background-color 0.3s ease;
+  background-color: transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cta-btn.block {
+  display: block;
+  width: 100%;
 }
 
 .cta-btn:hover {
@@ -142,6 +150,14 @@ footer a {
 .cta-btn.cta-btn-yellow:hover {
   background-color: white;
   color: #ffc90c;
+}
+
+.cta-btn.cta-btn-grey {
+  border: 1px solid #f7f8fc;
+}
+
+.cta-btn.cta-btn-grey:hover {
+  background-color: rgb(204,206,213);
 }
 
 .cta-btn>.arrow {
@@ -159,6 +175,11 @@ footer a {
 
 .cta-btn.cta-btn-yellow>.arrow {
   background-color: rgb(255, 228, 131);
+}
+
+.cta-btn.cta-btn-grey>.arrow {
+  background-color: rgb(204,206,213);
+  color: white;
 }
 
 .brand a {
@@ -330,4 +351,20 @@ section.full-hight {
 
 .explore-models-img {
   width: 100%;
+}
+
+
+.cookie-modal {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem 2rem 2rem 2rem;
+  text-align: right;
+  background-color: rgb(51,55,70);
+  border-top: 1px solid #545a70;
+}
+
+.hidden {
+  display: none;
 }
