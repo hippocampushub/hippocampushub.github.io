@@ -111,6 +111,14 @@ footer a {
   line-height: 4.2rem;
 }
 
+@media only screen and (max-width: 64em) {
+  .title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    line-height: 3.4rem;
+  }
+}
+
 .subtitle {
   font-size: 1.2rem;
 }
@@ -278,6 +286,16 @@ section.full-hight {
   font-size: 22px;
   line-height: 22px;
   vertical-align: middle;
+}
+
+@media only screen and (max-width: 64em) {
+  .cnr-logo {
+    height: 32px;
+  }
+
+  .epfl-logo-img {
+    height: 16px;
+  }
 }
 
 .info-block {
