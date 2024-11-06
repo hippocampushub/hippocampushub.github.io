@@ -181,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hamburger menu functionality
     const hamburgerMenu = document.querySelector('.hamburger-menu');
     const headerNav = document.querySelector('.header-nav');
-    // const header = document.querySelector('.header');
 
     hamburgerMenu.addEventListener('click', () => {
         hamburgerMenu.classList.toggle('open');
