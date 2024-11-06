@@ -1,0 +1,44 @@
+.button-large {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    border-radius: 3px;
+    width: 100%;
+    /* Make button full width on all screen sizes */
+}
+
+.button-large__text {
+    padding: 16px 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all linear 100ms;
+    flex-grow: 1;
+    /* Allow text to grow and fill available space */
+}
+
+.button-large__arrow {
+    aspect-ratio: 1 / 1;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 1px solid white;
+    transition: all linear 100ms;
+    flex-shrink: 0;
+    /* Prevent arrow from shrinking */
+}
+
+.button-large:hover .button-large__text {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button-large:hover .button-large__arrow {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+@media (min-width: 640px) {
+    .button-large {
+        width: auto;
+        /* Reset to auto width on larger screens */
+    }
+}
