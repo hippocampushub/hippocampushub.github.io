@@ -32,14 +32,14 @@
                     </svg>
                 </div>
                 <div class="header-submenu" style="display: none;">
-                    <a href="#" class="header-submenu__item">About the hub</a>
-                    <a href="#" class="header-submenu__item">Our tools</a>
-                    <a href="#" class="header-submenu__item">Resources</a>
+                    <a href="#about" class="header-submenu__item">About the hub</a>
+                    <a href="#tools" class="header-submenu__item">Our tools</a>
+                    <a href="#resources" class="header-submenu__item">Resources</a>
                 </div>
             </button>
 
             <button class="header-nav-button">
-                <a href="#">
+                <a href="https://www.hippocampushub.eu/model/">
                     <span class="header-nav-button__text text-base text-white">Explore Models</span>
                 </a>
                 <div class="header-nav-button-arrow">
@@ -175,13 +175,13 @@
                             class="header-submenu__item header-submenu-child-item">Other Frequencies</a>
                     </div>
 
-                    <a href="#" class="header-submenu__item highlight">Glossary</a>
-                    <a href="#" class="header-submenu__item highlight">Resources</a>
+                    <a href="https://www.hippocampushub.eu/model/glossary/" class="header-submenu__item highlight">Glossary</a>
+                    <a href="https://www.hippocampushub.eu/model/resources/" class="header-submenu__item highlight">Resources</a>
                 </div>
             </button>
 
             <button class="header-nav-button">
-                <a href="#">
+                <a href="https://www.hippocampushub.eu/model/build">
                     <span class="header-nav-button__text text-base text-white">Build Models</span>
                 </a>
                 <div class="header-nav-button-arrow">
@@ -191,7 +191,6 @@
                     </svg>
                 </div>
                 <div class="header-submenu" style="display: none;">
-
                     <a href="#" class="header-submenu__item header-submenu__collapsible">
                         <span>Data</span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -200,14 +199,14 @@
                         </svg>
                     </a>
                     <div class="header-submenu-children">
-                        <a href="#" class="header-submenu__item header-submenu-child-item">Connections</a>
-                        <a href="#" class="header-submenu__item header-submenu-child-item">Electrophysiology</a>
-                        <a href="#" class="header-submenu__item header-submenu-child-item">Morphologies</a>
+                        <a href="https://www.hippocampushub.eu/build/data/connection" class="header-submenu__item header-submenu-child-item">Connections</a>
+                        <a href="https://www.hippocampushub.eu/build/data/electrophysiology" class="header-submenu__item header-submenu-child-item">Electrophysiology</a>
+                        <a href="https://www.hippocampushub.eu/build/data/morphology" class="header-submenu__item header-submenu-child-item">Morphologies</a>
                     </div>
                 </div>
             </button>
 
-            <button class="header-contact-button">Contact Us</button>
+            <button class="header-contact-button" onclick="document.location.hash='#contact'">Contact Us</button>
         </nav>
         <button class="hamburger-menu">
             <span></span>
@@ -218,7 +217,14 @@
 
     <!-- Hero -->
     <section class="hero section text-white relative">
-        <video autoplay muted loop id="hero-video" class="absolute inset-0 w-full h-full object-cover">
+        <script>
+function revealHeroVideo() {
+    const video = document.getElementById("hero-video")
+    video.classList.add("show")
+}            
+        </script>
+        <video autoplay muted loop id="hero-video" class="absolute inset-0 w-full h-full object-cover"
+        oncanplaythrough="revealHeroVideo()">
             <source src="./asset/video/hero-1.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
@@ -267,287 +273,295 @@
         </div>
     </section>
     <!-- About -->
-    <section class="anim-about-trigger section grey py-16 sm:py-24 lg:py-32">
-        <div class="wrapper px-12 sm:px-10 lg:px-8">
-            <div class="grid-container">
-                <div class="col-span-12 lg:col-start-3 lg:col-span-3">
-                    <h2 class="text-3xl sm:text-4xl font-semibold mb-6 lg:mb-0">About the Hub</h2>
-                </div>
-                <div class="col-span-12 lg:col-start-6 lg:col-span-6">
-                    <p class="text-lg sm:text-xl">
-                        The Hippocampus Hub brings together free research tools and services, and learning resources for
-                        scientists and students interested in the hippocampus. It aims to provide a unique resource and
-                        bring together those interested in the hippocampus to create an active community.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="wrapper px-12 sm:px-10 lg:px-8 sm:pb-6 lg:pb-8 sm:mt-12">
-            <div class="grid-container">
-                <div class="col-span-12 lg:col-start-2 lg:col-span-5 mb-8 lg:mb-0 flex items-center justify-center">
-                    <div class="justify-center lg:justify-start ">
-                        <canvas id="3d-canvas" style="width: 100%; max-width: 400px; height: 400px;"></canvas>
+    <a name="about">
+        <section class="anim-about-trigger section grey py-16 sm:py-24 lg:py-32">
+            <div class="wrapper px-12 sm:px-10 lg:px-8">
+                <div class="grid-container">
+                    <div class="col-span-12 lg:col-start-3 lg:col-span-3">
+                        <h2 class="text-3xl sm:text-4xl font-semibold mb-6 lg:mb-0">About the Hub</h2>
+                    </div>
+                    <div class="col-span-12 lg:col-start-6 lg:col-span-6">
+                        <p class="text-lg sm:text-xl">
+                            The Hippocampus Hub brings together free research tools and services, and learning resources for
+                            scientists and students interested in the hippocampus. It aims to provide a unique resource and
+                            bring together those interested in the hippocampus to create an active community.
+                        </p>
                     </div>
                 </div>
-                <div class="col-span-12 lg:col-start-7 lg:col-span-5">
-                    <div class="space-y-8">
-                        <div>
-                            <p class="text-lg mb-1 text-white">Who Is the Hub For?</p>
-                            <p class="text-base mb-6 text-gray-600">
-                                The Hub is designed for everyone — from students and
-                                experimental scientists to computational neuroscientists and curious members of the
-                                public. We welcome diverse users and aim to inspire contributions from experimental
-                                scientists and modelers alike.
-                            </p>
+            </div>
+            <div class="wrapper px-12 sm:px-10 lg:px-8 sm:pb-6 lg:pb-8 sm:mt-12">
+                <div class="grid-container">
+                    <div class="col-span-12 lg:col-start-2 lg:col-span-5 mb-8 lg:mb-0 flex items-center justify-center">
+                        <div class="justify-center lg:justify-start ">
+                            <canvas id="3d-canvas" style="width: 100%; max-width: 400px; height: 400px;"></canvas>
                         </div>
-                        <div>
-                            <p class="text-lg mb-1 text-white">Collaborate With Us</p>
-                            <p class="text-base mb-6 text-gray-600">
-                                Have a project idea or want to collaborate? We're eager to hear from you! Whether you're
-                                contributing data or advancing models, your input is valuable. Visit our Terms &
-                                Conditions for more details on how to collaborate with us.
-                            </p>
-                        </div>
-                        <div>
-                            <p class="text-lg mb-1 text-white">Commercial Inquiries</p>
-                            <p class="text-base mb-6 text-gray-600">
-                                If you're interested in using the Hub for commercial or industrial purposes, please
-                                contact us for more information.
-                            </p>
-                        </div>
-                        <div>
-                            <p class="text-lg mb-1 text-white">Developed by</p>
-                            <p class="text-base mb-6 text-gray-600 pb-8">
-                                The Hub is a joint initiative by the Institute of Biophysics, National Research Council
-                                (Italy), and the Blue Brain Project, École Polytechnique Fédérale de Lausanne
-                                (Switzerland).
-                            </p>
-                            <div class="flex flex-row gap-6">
-                                <img width="88" height="28" src="./asset/svg/epfl-logo.svg" alt="EPFL Logo"
-                                    class="h-7 w-auto" />
-                                <img width="254" height="28" src="./asset/svg/cnr-logo.svg" alt="CNR Logo"
-                                    class="h-7 w-auto" />
+                    </div>
+                    <div class="col-span-12 lg:col-start-7 lg:col-span-5">
+                        <div class="space-y-8">
+                            <div>
+                                <p class="text-lg mb-1 text-white">Who Is the Hub For?</p>
+                                <p class="text-base mb-6 text-gray-600">
+                                    The Hub is designed for everyone — from students and
+                                    experimental scientists to computational neuroscientists and curious members of the
+                                    public. We welcome diverse users and aim to inspire contributions from experimental
+                                    scientists and modelers alike.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-lg mb-1 text-white">Collaborate With Us</p>
+                                <p class="text-base mb-6 text-gray-600">
+                                    Have a project idea or want to collaborate? We're eager to hear from you! Whether you're
+                                    contributing data or advancing models, your input is valuable. Visit our Terms &
+                                    Conditions for more details on how to collaborate with us.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-lg mb-1 text-white">Commercial Inquiries</p>
+                                <p class="text-base mb-6 text-gray-600">
+                                    If you're interested in using the Hub for commercial or industrial purposes, please
+                                    contact us for more information.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-lg mb-1 text-white">Developed by</p>
+                                <p class="text-base mb-6 text-gray-600 pb-8">
+                                    The Hub is a joint initiative by the Institute of Biophysics, National Research Council
+                                    (Italy), and the Blue Brain Project, École Polytechnique Fédérale de Lausanne
+                                    (Switzerland).
+                                </p>
+                                <div class="flex flex-row gap-6">
+                                    <img width="88" height="28" src="./asset/svg/epfl-logo.svg" alt="EPFL Logo"
+                                        class="h-7 w-auto" />
+                                    <img width="254" height="28" src="./asset/svg/cnr-logo.svg" alt="CNR Logo"
+                                        class="h-7 w-auto" />
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </a>
 
     <!-- Our Tools -->
-    <section class="section blue py-16 sm:py-24 lg:py-32 px-12 sm:px-10 lg:px-8">
-        <div class="wrapper flex flex-col text-white ">
-            <h2 class="text-3xl sm:text-4xl font-semibold mb-8 lg:mx-auto lg:text-center">Our Tools</h2>
-            <div class="grid-container">
-                <div class="col-span-12 lg:col-start-4 lg:col-end-10 mb-16 lg:mb-32">
-                    <p class="text-lg sm:text-xl lg:text-center">
-                        The Hub offers two primary tools: a powerful platform for building new neuroscience models, and
-                        an interactive explorer for delving into previously constructed models.
-                    </p>
-                </div>
-
-                <!-- Explore Models -->
-                <div class="col-span-12 lg:col-start-2 lg:col-end-6 mb-16 lg:mb-0 order-2 lg:order-1">
-                    <div class="flex flex-row gap-4 mb-4 lg:justify-end">
-                        <img width="44" height="14" src="./asset/svg/epfl-logo.svg" alt="EPFL Logo"
-                            class="h-3.5 w-auto" />
-                        <img width="130" height="25" src="./asset/svg/bbp-logo.svg" alt="BBP Logo" class="h-6 w-auto" />
+    <a name="tools">
+        <section class="section blue py-16 sm:py-24 lg:py-32 px-12 sm:px-10 lg:px-8">
+            <div class="wrapper flex flex-col text-white ">
+                <h2 class="text-3xl sm:text-4xl font-semibold mb-8 lg:mx-auto lg:text-center">Our Tools</h2>
+                <div class="grid-container">
+                    <div class="col-span-12 lg:col-start-4 lg:col-end-10 mb-16 lg:mb-32">
+                        <p class="text-lg sm:text-xl lg:text-center">
+                            The Hub offers two primary tools: a powerful platform for building new neuroscience models, and
+                            an interactive explorer for delving into previously constructed models.
+                        </p>
                     </div>
-                    <h3 class="text-2xl sm:text-3xl mb-4 lg:text-right">Explore Models</h3>
-                    <p class="text-base sm:text-lg mb-8 lg:mb-12 lg:text-right">
-                        Explore resources for building detailed hippocampal models, with tools for collaborative
-                        creation and visualization in an open-access environment. Utilize neural data from platforms
-                        like NeuroMorpho and Hippocampome, and seamlessly integrate with EBRAINS services for
-                        comprehensive model development and analysis.
-                    </p>
-                    <div class="lg:text-right">
+
+                    <!-- Explore Models -->
+                    <div class="col-span-12 lg:col-start-2 lg:col-end-6 mb-16 lg:mb-0 order-2 lg:order-1">
+                        <div class="flex flex-row gap-4 mb-4 lg:justify-end">
+                            <img width="44" height="14" src="./asset/svg/epfl-logo.svg" alt="EPFL Logo"
+                                class="h-3.5 w-auto" />
+                            <img width="130" height="25" src="./asset/svg/bbp-logo.svg" alt="BBP Logo" class="h-6 w-auto" />
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl mb-4 lg:text-right">Explore Models</h3>
+                        <p class="text-base sm:text-lg mb-8 lg:mb-12 lg:text-right">
+                            Explore resources for building detailed hippocampal models, with tools for collaborative
+                            creation and visualization in an open-access environment. Utilize neural data from platforms
+                            like NeuroMorpho and Hippocampome, and seamlessly integrate with EBRAINS services for
+                            comprehensive model development and analysis.
+                        </p>
+                        <div class="lg:text-right">
+                            <button class="button-small">
+                                <div class="button-small__text text-sm">
+                                    Explore Models
+                                </div>
+                                <div class="button-small__arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 24" stroke-width="2"
+                                        stroke="currentColor" class="size-3">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Explore Models Image -->
+                    <div class="col-span-12 lg:col-start-7 lg:col-end-12 mb-8 lg:mb-0 order-1 lg:order-2">
+
+                    </div>
+
+                    <!-- Build Models Image -->
+                    <div class="col-span-12 lg:col-start-2 lg:col-end-7 mb-8 lg:mb-0 order-3">
+
+                    </div>
+
+                    <!-- Build Models -->
+                    <div class="col-span-12 lg:col-start-8 lg:col-end-12 order-4">
+                        <div class="flex flex-row gap-4 mb-4">
+                            <img width="254" height="28" src="./asset/svg/cnr-logo.svg" alt="CNR Logo" class="h-7 w-auto" />
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl mb-4">Build Models</h3>
+                        <p class="text-base sm:text-lg mb-8 lg:mb-12">
+                            Access the data behind published models, review model artifacts, and browse validation results —
+                            all without needing to download files or install software. You can also run in silico
+                            experiments using online services and computational resources provided by e-Science platforms
+                            like EBRAINS.
+                        </p>
                         <button class="button-small">
                             <div class="button-small__text text-sm">
-                                Explore Models
+                                Build Models
                             </div>
                             <div class="button-small__arrow">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 24" stroke-width="2"
                                     stroke="currentColor" class="size-3">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                                 </svg>
                             </div>
                         </button>
                     </div>
                 </div>
-
-                <!-- Explore Models Image -->
-                <div class="col-span-12 lg:col-start-7 lg:col-end-12 mb-8 lg:mb-0 order-1 lg:order-2">
-
-                </div>
-
-                <!-- Build Models Image -->
-                <div class="col-span-12 lg:col-start-2 lg:col-end-7 mb-8 lg:mb-0 order-3">
-
-                </div>
-
-                <!-- Build Models -->
-                <div class="col-span-12 lg:col-start-8 lg:col-end-12 order-4">
-                    <div class="flex flex-row gap-4 mb-4">
-                        <img width="254" height="28" src="./asset/svg/cnr-logo.svg" alt="CNR Logo" class="h-7 w-auto" />
-                    </div>
-                    <h3 class="text-2xl sm:text-3xl mb-4">Build Models</h3>
-                    <p class="text-base sm:text-lg mb-8 lg:mb-12">
-                        Access the data behind published models, review model artifacts, and browse validation results —
-                        all without needing to download files or install software. You can also run in silico
-                        experiments using online services and computational resources provided by e-Science platforms
-                        like EBRAINS.
-                    </p>
-                    <button class="button-small">
-                        <div class="button-small__text text-sm">
-                            Build Models
-                        </div>
-                        <div class="button-small__arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 24" stroke-width="2"
-                                stroke="currentColor" class="size-3">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                            </svg>
-                        </div>
-                    </button>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </a>
 
     <!-- Resources -->
-    <section class="section grey py-16 sm:py-24 lg:py-32">
-        <div class="wrapper px-12 sm:px-10 lg:px-8">
-            <div class="grid-container">
-                <div class="col-span-12 lg:col-start-2 lg:col-end-8 mb-8">
-                    <h2 class="text-3xl sm:text-4xl font-semibold mb-4 sm:mb-8">Resources</h2>
-                    <p class="text-lg sm:text-lg lg:text-xl">
-                        The Hippocampus Hub provides a number of learning resources focused on the hippocampus. They
-                        range from massive open online courses (MOOCs) for students or scientists that want to train on
-                        the specific methods and approaches used and provided by the Hub, to online video tutorials,
-                        courses and presentations.
-                    </p>
-                </div>
+    <a name="resources">
+        <section class="section grey py-16 sm:py-24 lg:py-32">
+            <div class="wrapper px-12 sm:px-10 lg:px-8">
+                <div class="grid-container">
+                    <div class="col-span-12 lg:col-start-2 lg:col-end-8 mb-8">
+                        <h2 class="text-3xl sm:text-4xl font-semibold mb-4 sm:mb-8">Resources</h2>
+                        <p class="text-lg sm:text-lg lg:text-xl">
+                            The Hippocampus Hub provides a number of learning resources focused on the hippocampus. They
+                            range from massive open online courses (MOOCs) for students or scientists that want to train on
+                            the specific methods and approaches used and provided by the Hub, to online video tutorials,
+                            courses and presentations.
+                        </p>
+                    </div>
 
-                <div class="col-span-12 lg:col-start-2 lg:col-end-12 overflow-x-auto">
-                    <table class="min-w-full divide-y divide-gray-700 border-b border-gray-700">
-                        <thead class="sm:table-header-group hidden">
-                            <tr>
-                                <th class="py-4 px-4 text-left text-lg sm:text-lg font-semibold text-gray-200">Title
-                                </th>
-                                <th class="py-4 px-4 text-left text-lg sm:text-lg font-semibold text-gray-200">Author
-                                </th>
-                                <th class="py-4 px-4 text-right text-lg sm:text-lg font-semibold text-gray-200">Year
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-600">
-                            <tr class="sm:table-row flex flex-col pb-4">
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                    <a href="#"
-                                        class="hover:text-white focus:text-white transition-colors no-underline">
-                                        Simulation Neuroscience MOOC
-                                    </a>
-                                </td>
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span
-                                        class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                    EPFL
-                                </td>
-                                <td
-                                    class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                    2017
-                                </td>
-                            </tr>
-                            <tr class="sm:table-row flex flex-col pb-4">
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                    <a href="#"
-                                        class="hover:text-white focus:text-white transition-colors no-underline">
-                                        The physiological variability of channel density in hippocampal CA1 pyramidal
-                                        cells and interneurons explored using a unified data-driven modeling workflow.
-                                    </a>
-                                </td>
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span
-                                        class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                    Rosanna Migliore et al.
-                                </td>
-                                <td
-                                    class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                    2018
-                                </td>
-                            </tr>
-                            <tr class="sm:table-row flex flex-col pb-4">
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                    <a href="#"
-                                        class="hover:text-white focus:text-white transition-colors no-underline">
-                                        Data-driven integration of hippocampal CA1 synaptic physiology in silico.
-                                    </a>
-                                </td>
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span
-                                        class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                    András Ecker et al.
-                                </td>
-                                <td
-                                    class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                    2020
-                                </td>
-                            </tr>
-                            <tr class="sm:table-row flex flex-col pb-4 border-b border-gray-700">
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                    <a href="#"
-                                        class="hover:text-white focus:text-white transition-colors no-underline">
-                                        HippoUnit: A software tool for the automated testing and systematic comparison
-                                        of detailed models of hippocampal neurons based on electrophysiological data.
-                                    </a>
-                                </td>
-                                <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                    <span
-                                        class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                    Sára Sáray et al.
-                                </td>
-                                <td
-                                    class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                    <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                    2021
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section bg-white py-10 sm:py-14">
-        <div class="wrapper px-6 sm:px-10 lg:px-8">
-            <div class="grid-container w-full !mb-0">
-                <div class="col-span-12 lg:col-start-2 lg:col-end-8">
-                    <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-black">Get in touch.</h2>
-                    <p class="text-lg sm:text-xl text-black mb-6 sm:mb-8">
-                        For any inquiries, feel free to contact us anytime.<br class="hidden sm:inline" />
-                        We're here to help!
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
-                        <button class="button-simple text-black w-full sm:w-auto py-4 sm:py-2">Blue Brain
-                            Project</button>
-                        <button class="button-simple text-black w-full sm:w-auto py-4 sm:py-2">National Research
-                            Council</button>
+                    <div class="col-span-12 lg:col-start-2 lg:col-end-12 overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-700 border-b border-gray-700">
+                            <thead class="sm:table-header-group hidden">
+                                <tr>
+                                    <th class="py-4 px-4 text-left text-lg sm:text-lg font-semibold text-gray-200">Title
+                                    </th>
+                                    <th class="py-4 px-4 text-left text-lg sm:text-lg font-semibold text-gray-200">Author
+                                    </th>
+                                    <th class="py-4 px-4 text-right text-lg sm:text-lg font-semibold text-gray-200">Year
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-600">
+                                <tr class="sm:table-row flex flex-col pb-4">
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
+                                        <a href="#"
+                                            class="hover:text-white focus:text-white transition-colors no-underline">
+                                            Simulation Neuroscience MOOC
+                                        </a>
+                                    </td>
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span
+                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
+                                        EPFL
+                                    </td>
+                                    <td
+                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
+                                        2017
+                                    </td>
+                                </tr>
+                                <tr class="sm:table-row flex flex-col pb-4">
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
+                                        <a href="#"
+                                            class="hover:text-white focus:text-white transition-colors no-underline">
+                                            The physiological variability of channel density in hippocampal CA1 pyramidal
+                                            cells and interneurons explored using a unified data-driven modeling workflow.
+                                        </a>
+                                    </td>
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span
+                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
+                                        Rosanna Migliore et al.
+                                    </td>
+                                    <td
+                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
+                                        2018
+                                    </td>
+                                </tr>
+                                <tr class="sm:table-row flex flex-col pb-4">
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
+                                        <a href="#"
+                                            class="hover:text-white focus:text-white transition-colors no-underline">
+                                            Data-driven integration of hippocampal CA1 synaptic physiology in silico.
+                                        </a>
+                                    </td>
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span
+                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
+                                        András Ecker et al.
+                                    </td>
+                                    <td
+                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
+                                        2020
+                                    </td>
+                                </tr>
+                                <tr class="sm:table-row flex flex-col pb-4 border-b border-gray-700">
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
+                                        <a href="#"
+                                            class="hover:text-white focus:text-white transition-colors no-underline">
+                                            HippoUnit: A software tool for the automated testing and systematic comparison
+                                            of detailed models of hippocampal neurons based on electrophysiological data.
+                                        </a>
+                                    </td>
+                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
+                                        <span
+                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
+                                        Sára Sáray et al.
+                                    </td>
+                                    <td
+                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
+                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
+                                        2021
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </a>
 
+    <!-- Contact -->
+    <a name="contact">
+        <section class="section bg-white py-10 sm:py-14">
+            <div class="wrapper px-6 sm:px-10 lg:px-8">
+                <div class="grid-container w-full !mb-0">
+                    <div class="col-span-12 lg:col-start-2 lg:col-end-8">
+                        <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-black">Get in touch.</h2>
+                        <p class="text-lg sm:text-xl text-black mb-6 sm:mb-8">
+                            For any inquiries, feel free to contact us anytime.<br class="hidden sm:inline" />
+                            We're here to help!
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                            <button class="button-simple text-black w-full sm:w-auto py-4 sm:py-2">Blue Brain
+                                Project</button>
+                            <button class="button-simple text-black w-full sm:w-auto py-4 sm:py-2">National Research
+                                Council</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </a>
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="wrapper">
