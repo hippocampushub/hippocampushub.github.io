@@ -10,6 +10,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
     <script src="./js/header.js"></script>
+    <style>
+.tools-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    color: #eee;
+}
+.tools-section > div {
+    max-width: 600px;
+    min-width: 300px;
+}
+.tools-section .footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+}
+    </style>
 </head>
 
 <body>
@@ -34,14 +52,14 @@
                 <div class="header-submenu" style="display: none;">
                     <a href="#about" class="header-submenu__item">About the hub</a>
                     <a href="#tools" class="header-submenu__item">Our tools</a>
-                    <a href="#resources" class="header-submenu__item">Resources</a>
+                    <a href="https://www.hippocampushub.eu/model/resources/" class="header-submenu__item">Resources</a>
                 </div>
             </button>
 
             <button class="header-nav-button">
-                <a href="https://www.hippocampushub.eu/model/">
+                <!-- <a href="https://www.hippocampushub.eu/model/"> -->
                     <span class="header-nav-button__text text-base text-white">Explore Models</span>
-                </a>
+                <!-- </a> -->
                 <div class="header-nav-button-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-4" style="color: white;">
@@ -59,25 +77,25 @@
                         </svg>
                     </a>
                     <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/experimental-data/layer-anatomy"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/layer-anatomy"
                             class="header-submenu__item header-submenu-child-item">Layer Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/neuronal-morphology"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/neuronal-morphology"
                             class="header-submenu__item header-submenu-child-item">Neuronal Morphology</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/neuronal-electrophysiology"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/neuronal-electrophysiology"
                             class="header-submenu__item header-submenu-child-item">Neuronal Electrophysiology</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/cell-density"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/cell-density"
                             class="header-submenu__item header-submenu-child-item">Cell Density</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/connection-anatomy"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/connection-anatomy"
                             class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/connection-physiology"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/connection-physiology"
                             class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/connection-physiology"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/connection-physiology"
                             class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/schaffer-collaterals"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/schaffer-collaterals"
                             class="header-submenu__item header-submenu-child-item">Minis</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/minis"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/minis"
                             class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
-                        <a href="https://www.hippocampushub.eu/experimental-data/theta"
+                        <a href="https://www.hippocampushub.eu/model/experimental-data/theta"
                             class="header-submenu__item header-submenu-child-item">Theta</a>
                     </div>
 
@@ -89,23 +107,23 @@
                         </svg>
                     </a>
                     <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/volume"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/volume"
                             class="header-submenu__item header-submenu-child-item">Volume</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/cell-composition"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/cell-composition"
                             class="header-submenu__item header-submenu-child-item">Cell composition</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/morphology-library"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/morphology-library"
                             class="header-submenu__item header-submenu-child-item">Morphology Library</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/neuron-models"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/neuron-models"
                             class="header-submenu__item header-submenu-child-item">Neuron Models</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/neuron-model-library"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/neuron-model-library"
                             class="header-submenu__item header-submenu-child-item">Neuron Model Library</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/connection-anatomy"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/connection-anatomy"
                             class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/connection-physiology"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/connection-physiology"
                             class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/schaffer-collaterals"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/schaffer-collaterals"
                             class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
-                        <a href="https://www.hippocampushub.eu/reconstruction-data/acetylcholine"
+                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/acetylcholine"
                             class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
                     </div>
 
@@ -117,19 +135,19 @@
                         </svg>
                     </a>
                     <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/digital-reconstruction/region"
+                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/region"
                             class="header-submenu__item header-submenu-child-item">Region</a>
-                        <a href="https://www.hippocampushub.eu/digital-reconstruction/schaffer-collaterals"
+                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/schaffer-collaterals"
                             class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
-                        <a href="https://www.hippocampushub.eu/digital-reconstruction/connection-anatomy"
+                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/connection-anatomy"
                             class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/digital-reconstruction/connection-physiology"
+                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/connection-physiology"
                             class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/digital-reconstruction/neurons"
+                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/neurons"
                             class="header-submenu__item header-submenu-child-item">Neurons</a>
-                        <a href="https://www.hippocampushub.eu/digital-reconstruction/acetylcholine-effects-on-cells"
+                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/acetylcholine-effects-on-cells"
                             class="header-submenu__item header-submenu-child-item">Acetylcholine Effects on Cells</a>
-                        <a href="https://www.hippocampushub.eu/digital-reconstruction/acetylcholine-effects-on-synapses"
+                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/acetylcholine-effects-on-synapses"
                             class="header-submenu__item header-submenu-child-item">Acetylcholine Effects on Synapses</a>
                     </div>
 
@@ -141,17 +159,17 @@
                         </svg>
                     </a>
                     <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/validations/neurons"
+                        <a href="https://www.hippocampushub.eu/model/validations/neurons"
                             class="header-submenu__item header-submenu-child-item">Neurons</a>
-                        <a href="https://www.hippocampushub.eu/validations/connection-anatomy"
+                        <a href="https://www.hippocampushub.eu/model/validations/connection-anatomy"
                             class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/validations/connection-physiology"
+                        <a href="https://www.hippocampushub.eu/model/validations/connection-physiology"
                             class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/validations/schaffer-collaterals-1"
+                        <a href="https://www.hippocampushub.eu/model/validations/schaffer-collaterals-1"
                             class="header-submenu__item header-submenu-child-item">Schaffer collaterals 1</a>
-                        <a href="https://www.hippocampushub.eu/validations/schaffer-collaterals-2"
+                        <a href="https://www.hippocampushub.eu/model/validations/schaffer-collaterals-2"
                             class="header-submenu__item header-submenu-child-item">Schaffer collaterals 2</a>
-                        <a href="https://www.hippocampushub.eu/validations/acetylcholine"
+                        <a href="https://www.hippocampushub.eu/model/validations/acetylcholine"
                             class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
                     </div>
 
@@ -163,15 +181,15 @@
                         </svg>
                     </a>
                     <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/predictions/spontaneous-activity"
+                        <a href="https://www.hippocampushub.eu/model/predictions/spontaneouns-activity"
                             class="header-submenu__item header-submenu-child-item">Spontaneous Activity</a>
-                        <a href="https://www.hippocampushub.eu/predictions/voltage-calcium-scan"
+                        <a href="https://www.hippocampushub.eu/model/predictions/voltage"
                             class="header-submenu__item header-submenu-child-item">Voltage - Calcium Scan</a>
-                        <a href="https://www.hippocampushub.eu/predictions/theta-oscillatory-input"
+                        <a href="https://www.hippocampushub.eu/model/predictions/theta-oscillatory-input"
                             class="header-submenu__item header-submenu-child-item">Theta - Oscillatory input</a>
-                        <a href="https://www.hippocampushub.eu/predictions/theta-ms-input"
+                        <a href="https://www.hippocampushub.eu/model/predictions/theta-ms-input"
                             class="header-submenu__item header-submenu-child-item">Theta - MS input</a>
-                        <a href="https://www.hippocampushub.eu/predictions/other-frequencies"
+                        <a href="https://www.hippocampushub.eu/model/predictions/other-frequencies"
                             class="header-submenu__item header-submenu-child-item">Other Frequencies</a>
                     </div>
 
@@ -181,9 +199,9 @@
             </button>
 
             <button class="header-nav-button">
-                <a href="https://www.hippocampushub.eu/model/build">
+                <!-- <a href="https://www.hippocampushub.eu/model/build"> -->
                     <span class="header-nav-button__text text-base text-white">Build Models</span>
-                </a>
+                <!-- </a> -->
                 <div class="header-nav-button-arrow">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="size-4" style="color: white;">
@@ -225,7 +243,7 @@ function revealHeroVideo() {
         </script>
         <video autoplay muted loop id="hero-video" class="absolute inset-0 w-full h-full object-cover"
         oncanplaythrough="revealHeroVideo()">
-            <source src="./asset/video/hero-1.mp4" type="video/mp4">
+            <source src="./asset/video/hero-2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="relative z-10 flex max-w-[1600px] w-full mx-auto min-h-screen items-center px-12 sm:px-10 lg:px-8">
@@ -242,7 +260,7 @@ function revealHeroVideo() {
                             and its components!
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
-                            <button class="button-large sm:w-auto">
+                            <button class="button-large sm:w-auto" onclick="document.location.href = 'https://www.hippocampushub.eu/model/'">
                                 <div class="button-large__text text-base">
                                     Explore Models
                                 </div>
@@ -254,7 +272,7 @@ function revealHeroVideo() {
                                     </svg>
                                 </div>
                             </button>
-                            <button class="button-large  sm:w-auto">
+                            <button class="button-large  sm:w-auto" onclick="document.location.href = 'https://www.hippocampushub.eu/model/build'">
                                 <div class="button-large__text text-base">
                                     Build Models
                                 </div>
@@ -332,7 +350,7 @@ function revealHeroVideo() {
                                 <div class="flex flex-row gap-6">
                                     <img width="88" height="28" src="./asset/svg/epfl-logo.svg" alt="EPFL Logo"
                                         class="h-7 w-auto" />
-                                    <img width="254" height="28" src="./asset/svg/cnr-logo.svg" alt="CNR Logo"
+                                    <img width="254" height="28" src="./asset/svg/cnr-logo.light.svg" alt="CNR Logo"
                                         class="h-7 w-auto" />
                                 </div>
                             </div>
@@ -346,60 +364,51 @@ function revealHeroVideo() {
     <!-- Our Tools -->
     <a name="tools">
         <section class="section blue py-16 sm:py-24 lg:py-32 px-12 sm:px-10 lg:px-8">
-            <div class="wrapper flex flex-col text-white ">
-                <h2 class="text-3xl sm:text-4xl font-semibold mb-8 lg:mx-auto lg:text-center">Our Tools</h2>
-                <div class="grid-container">
-                    <div class="col-span-12 lg:col-start-4 lg:col-end-10 mb-16 lg:mb-32">
-                        <p class="text-lg sm:text-xl lg:text-center">
-                            The Hub offers two primary tools: a powerful platform for building new neuroscience models, and
-                            an interactive explorer for delving into previously constructed models.
-                        </p>
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-8 lg:mx-auto lg:text-center">Our Tools</h2>
+            <div class="grid-container">
+                <div class="col-span-12 lg:col-start-4 lg:col-end-10 mb-16 lg:mb-32">
+                    <p class="text-lg sm:text-xl lg:text-center">
+                        The Hub offers two primary tools: a powerful platform for building new neuroscience models, and
+                        an interactive explorer for delving into previously constructed models.
+                    </p>
+                </div>
+            </div>
+            <div class="tools-section">
+                <!-- Explore Models -->
+                <div>
+                    <div class="flex flex-row gap-4 mb-4">
+                        <img width="44" height="14" src="./asset/svg/epfl-logo.svg" alt="EPFL Logo"
+                            class="h-3.5 w-auto" />
+                        <img width="130" height="25" src="./asset/svg/bbp-logo.svg" alt="BBP Logo" class="h-6 w-auto" />
                     </div>
-
-                    <!-- Explore Models -->
-                    <div class="col-span-12 lg:col-start-2 lg:col-end-6 mb-16 lg:mb-0 order-2 lg:order-1">
-                        <div class="flex flex-row gap-4 mb-4 lg:justify-end">
-                            <img width="44" height="14" src="./asset/svg/epfl-logo.svg" alt="EPFL Logo"
-                                class="h-3.5 w-auto" />
-                            <img width="130" height="25" src="./asset/svg/bbp-logo.svg" alt="BBP Logo" class="h-6 w-auto" />
-                        </div>
-                        <h3 class="text-2xl sm:text-3xl mb-4 lg:text-right">Explore Models</h3>
-                        <p class="text-base sm:text-lg mb-8 lg:mb-12 lg:text-right">
-                            Explore resources for building detailed hippocampal models, with tools for collaborative
-                            creation and visualization in an open-access environment. Utilize neural data from platforms
-                            like NeuroMorpho and Hippocampome, and seamlessly integrate with EBRAINS services for
-                            comprehensive model development and analysis.
-                        </p>
-                        <div class="lg:text-right">
-                            <button class="button-small">
-                                <div class="button-small__text text-sm">
-                                    Explore Models
-                                </div>
-                                <div class="button-small__arrow">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 24" stroke-width="2"
-                                        stroke="currentColor" class="size-3">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                                    </svg>
-                                </div>
-                            </button>
-                        </div>
+                    <h3 class="text-2xl sm:text-3xl mb-4">Explore Models</h3>
+                    <p class="text-base sm:text-lg mb-8 lg:mb-12">
+                        Explore resources for building detailed hippocampal models, with tools for collaborative
+                        creation and visualization in an open-access environment. Utilize neural data from platforms
+                        like NeuroMorpho and Hippocampome, and seamlessly integrate with EBRAINS services for
+                        comprehensive model development and analysis.
+                    </p>
+                    <div class="footer">
+                        <button class="button-small" onclick="document.location.href = 'https://www.hippocampushub.eu/model/'">
+                            <div class="button-small__text text-sm">
+                                Explore Models
+                            </div>
+                            <div class="button-small__arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 24" stroke-width="2"
+                                    stroke="currentColor" class="size-3">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                </svg>
+                            </div>
+                        </button>
                     </div>
-
-                    <!-- Explore Models Image -->
-                    <div class="col-span-12 lg:col-start-7 lg:col-end-12 mb-8 lg:mb-0 order-1 lg:order-2">
-
-                    </div>
-
-                    <!-- Build Models Image -->
-                    <div class="col-span-12 lg:col-start-2 lg:col-end-7 mb-8 lg:mb-0 order-3">
-
-                    </div>
-
+                </div>
+                <!-- Build Models Image -->
+                <div>
                     <!-- Build Models -->
                     <div class="col-span-12 lg:col-start-8 lg:col-end-12 order-4">
                         <div class="flex flex-row gap-4 mb-4">
-                            <img width="254" height="28" src="./asset/svg/cnr-logo.svg" alt="CNR Logo" class="h-7 w-auto" />
+                            <img width="254" height="28" src="./asset/svg/cnr-logo.light.svg" alt="CNR Logo" class="h-7 w-auto" />
                         </div>
                         <h3 class="text-2xl sm:text-3xl mb-4">Build Models</h3>
                         <p class="text-base sm:text-lg mb-8 lg:mb-12">
@@ -408,131 +417,19 @@ function revealHeroVideo() {
                             experiments using online services and computational resources provided by e-Science platforms
                             like EBRAINS.
                         </p>
-                        <button class="button-small">
-                            <div class="button-small__text text-sm">
-                                Build Models
-                            </div>
-                            <div class="button-small__arrow">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 24" stroke-width="2"
-                                    stroke="currentColor" class="size-3">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
-                                </svg>
-                            </div>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </a>
-
-    <!-- Resources -->
-    <a name="resources">
-        <section class="section grey py-16 sm:py-24 lg:py-32">
-            <div class="wrapper px-12 sm:px-10 lg:px-8">
-                <div class="grid-container">
-                    <div class="col-span-12 lg:col-start-2 lg:col-end-8 mb-8">
-                        <h2 class="text-3xl sm:text-4xl font-semibold mb-4 sm:mb-8">Resources</h2>
-                        <p class="text-lg sm:text-lg lg:text-xl">
-                            The Hippocampus Hub provides a number of learning resources focused on the hippocampus. They
-                            range from massive open online courses (MOOCs) for students or scientists that want to train on
-                            the specific methods and approaches used and provided by the Hub, to online video tutorials,
-                            courses and presentations.
-                        </p>
-                    </div>
-
-                    <div class="col-span-12 lg:col-start-2 lg:col-end-12 overflow-x-auto">
-                        <table class="min-w-full divide-y divide-gray-700 border-b border-gray-700">
-                            <thead class="sm:table-header-group hidden">
-                                <tr>
-                                    <th class="py-4 px-4 text-left text-lg sm:text-lg font-semibold text-gray-200">Title
-                                    </th>
-                                    <th class="py-4 px-4 text-left text-lg sm:text-lg font-semibold text-gray-200">Author
-                                    </th>
-                                    <th class="py-4 px-4 text-right text-lg sm:text-lg font-semibold text-gray-200">Year
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-gray-600">
-                                <tr class="sm:table-row flex flex-col pb-4">
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                        <a href="#"
-                                            class="hover:text-white focus:text-white transition-colors no-underline">
-                                            Simulation Neuroscience MOOC
-                                        </a>
-                                    </td>
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span
-                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                        EPFL
-                                    </td>
-                                    <td
-                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                        2017
-                                    </td>
-                                </tr>
-                                <tr class="sm:table-row flex flex-col pb-4">
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                        <a href="#"
-                                            class="hover:text-white focus:text-white transition-colors no-underline">
-                                            The physiological variability of channel density in hippocampal CA1 pyramidal
-                                            cells and interneurons explored using a unified data-driven modeling workflow.
-                                        </a>
-                                    </td>
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span
-                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                        Rosanna Migliore et al.
-                                    </td>
-                                    <td
-                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                        2018
-                                    </td>
-                                </tr>
-                                <tr class="sm:table-row flex flex-col pb-4">
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                        <a href="#"
-                                            class="hover:text-white focus:text-white transition-colors no-underline">
-                                            Data-driven integration of hippocampal CA1 synaptic physiology in silico.
-                                        </a>
-                                    </td>
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span
-                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                        András Ecker et al.
-                                    </td>
-                                    <td
-                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                        2020
-                                    </td>
-                                </tr>
-                                <tr class="sm:table-row flex flex-col pb-4 border-b border-gray-700">
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Title:</span>
-                                        <a href="#"
-                                            class="hover:text-white focus:text-white transition-colors no-underline">
-                                            HippoUnit: A software tool for the automated testing and systematic comparison
-                                            of detailed models of hippocampal neurons based on electrophysiological data.
-                                        </a>
-                                    </td>
-                                    <td class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base font-medium text-gray-300">
-                                        <span
-                                            class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Author:</span>
-                                        Sára Sáray et al.
-                                    </td>
-                                    <td
-                                        class="py-2 sm:py-4 px-0 sm:px-4 text-base sm:text-base sm:text-right text-gray-400">
-                                        <span class="sm:hidden font-semibold text-gray-200 block mb-1 text-lg">Year:</span>
-                                        2021
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="footer">
+                            <button class="button-small" onclick="document.location.href = 'https://www.hippocampushub.eu/model/build'">
+                                <div class="button-small__text text-sm">
+                                    Build Models
+                                </div>
+                                <div class="button-small__arrow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 24" stroke-width="2"
+                                        stroke="currentColor" class="size-3">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -551,10 +448,16 @@ function revealHeroVideo() {
                             We're here to help!
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
-                            <button class="button-simple text-black w-full sm:w-auto py-4 sm:py-2">Blue Brain
-                                Project</button>
-                            <button class="button-simple text-black w-full sm:w-auto py-4 sm:py-2">National Research
-                                Council</button>
+                            <button class="button-simple text-black w-full sm:w-auto py-4 sm:py-2"
+                            onclick="getInTouch()"
+                            >Send us an email</button>
+                            <script>
+function getInTouch() {
+    const a = String.fromCharCode(1<<6)
+    const u = ["u", "b.e","hippocampushu",a,"nfo","o:i","lt","mai"].reverse().join("")
+    document.location.href = u
+}
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -576,9 +479,9 @@ function revealHeroVideo() {
             <div class="grid-container w-full">
                 <!-- First Column -->
                 <div class="col-span-3 col-start-2 col-end-4">
-                    <Link href="https://www.epfl.ch/research/domains/bluebrain/">
+                    <a data-type="link" href="https://www.epfl.ch/research/domains/bluebrain/">
                     Blue Brain Project
-                    </Link>
+                    </a>
                     <br />
                     <br />
                     <p class="text-gray-400">
@@ -592,19 +495,19 @@ function revealHeroVideo() {
                 <div class="col-span-2 col-start-6 col-end-8">
                     <ul class="list-none p-0">
                         <li class="mb-2">
-                            <Link href={`/terms-of-use/`} class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/terms-of-use/" class="text-white hover:underline">
                             Terms of Use
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-2">
-                            <Link href={`/privacy-policy/`} class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/privacy-policy/" class="text-white hover:underline">
                             Privacy Policy
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-2">
-                            <Link href={`/cookies-policy/`} class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/cookies-policy/" class="text-white hover:underline">
                             Cookies Policy
-                            </Link>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -613,74 +516,74 @@ function revealHeroVideo() {
                 <div class="col-span-2 col-start-10 col-end-12">
                     <ul class="list-none p-0">
                         <li class="mb-1">
-                            <Link href="/" class="text-white hover:underline">
+                            <a data-type="link" href="/" class="text-white hover:underline">
                             Home
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-1">
-                            <Link href="/build/" class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/build" class="text-white hover:underline">
                             Build Models
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-1">
-                            <Link href={`/`} class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/" class="text-white hover:underline">
                             Explore Models
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-1">
-                            <Link href="/#resources" class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/resources/" class="text-white hover:underline">
                             Resources
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-1">
-                            <Link href="/#terms" class="text-white hover:underline">
+                            <a data-type="link" href="#terms" class="text-white hover:underline">
                             Terms & Conditions
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-1">
-                            <Link href={`/resources`} class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/resources/" class="text-white hover:underline">
                             Resources
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-1">
-                            <Link href={`/glossary`} class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/glossary/" class="text-white hover:underline">
                             Glossary
-                            </Link>
+                            </a>
                         </li>
                         <li class="mb-1">
-                            <Link href="/#contact-us" class="text-white hover:underline">
+                            <a data-type="link" href="#contact" class="text-white hover:underline">
                             Contact Us
-                            </Link>
+                            </a>
                         </li>
                     </ul>
 
                     <div class="mt-4">
                         <p class="text-white">Follow the Blue Brain</p>
                         <div class="flex gap-2 mt-2">
-                            <Link href="https://x.com/bluebrainpjt?lang=en">
+                            <a data-type="link" href="https://x.com/bluebrainpjt?lang=en">
                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
                                 height="1.5rem" width="1.5rem" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z">
                                 </path>
                             </svg>
-                            </Link>
-                            <Link href="https://www.linkedin.com/showcase/blue-brain-project/">
+                            </a>
+                            <a data-type="link" href="https://www.linkedin.com/showcase/blue-brain-project/">
                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
                                 height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z">
                                 </path>
                             </svg>
-                            </Link>
-                            <Link href="https://www.youtube.com/user/Bluebrainpjt/featured/">
+                            </a>
+                            <a data-type="link" href="https://www.youtube.com/user/Bluebrainpjt/featured/">
                             <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512"
                                 height="1.5em" width="1.5em" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M186.8 202.1l95.2 54.1-95.2 54.1V202.1zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-42 176.3s0-59.6-7.6-88.2c-4.2-15.8-16.5-28.2-32.2-32.4C337.9 128 224 128 224 128s-113.9 0-142.2 7.7c-15.7 4.2-28 16.6-32.2 32.4-7.6 28.5-7.6 88.2-7.6 88.2s0 59.6 7.6 88.2c4.2 15.8 16.5 27.7 32.2 31.9C110.1 384 224 384 224 384s113.9 0 142.2-7.7c15.7-4.2 28-16.1 32.2-31.9 7.6-28.5 7.6-88.1 7.6-88.1z">
                                 </path>
                             </svg>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                 </div>
