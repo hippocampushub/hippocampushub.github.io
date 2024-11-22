@@ -1,0 +1,33 @@
+.button-small {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+    border-radius: 3px;
+
+}
+
+.button-small__text {
+    padding: 11px 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all linear 100ms;
+}
+
+.button-small__arrow {
+    aspect-ratio: 1 / 1;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-left: 1px solid white;
+
+    transition: all linear 100ms;
+}
+
+.button-small:hover .button-small__text {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button-small:hover .button-small__arrow {
+    background-color: rgba(255, 255, 255, 0.6);
+}

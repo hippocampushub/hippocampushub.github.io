@@ -1,0 +1,15 @@
+.button-simple {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: all linear 100ms;
+}
+
+
+.button-simple:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+}

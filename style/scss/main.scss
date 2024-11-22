@@ -1,0 +1,145 @@
+@import './components/header.scss';
+@import './components/button-large.scss';
+@import './components/button-small.scss';
+@import './components/button-simple.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('/public/asset/fonts/TitilliumWeb-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('/public/asset/fonts/TitilliumWeb-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    /* SemiBold */
+    font-style: normal;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    overflow-x: hidden;
+    background-color: black
+}
+
+.wrapper {
+    @apply flex max-w-[1600px] w-full mx-auto;
+}
+
+.grid-container {
+    @apply grid grid-cols-12 gap-6 text-white mb-16;
+}
+
+.hero {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.section {
+    width: 100svw;
+}
+
+.section .section--blue {}
+
+.section.grey {
+    background: linear-gradient(90deg, #020202 0%, #030303 25%, #040404 50%, #030303 75%, #020202 100%);
+}
+
+.section.blue {
+    background: linear-gradient(90deg, #02021D 0%, #050022 25%, #02021D 50%, #050022 75%, #02021D 100%);
+    filter: brightness(1);
+}
+
+
+canvas {
+    display: block;
+}
+
+
+
+
+
+
+
+.footer {
+    /* background-color: rgb(248,249,253); */
+    background-color: #313354;
+
+    position: relative;
+    /* Ensure the pseudo-element is positioned relative to the footer */
+
+
+    h3,
+    h4 {
+        font-size: 1.3rem;
+    }
+
+
+    h2,
+    h3,
+    h4,
+    a,
+    a:hover {
+        color: white;
+    }
+
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li {
+
+        margin-bottom: .5rem;
+    }
+
+    a:hover {
+        text-decoration: underline;
+
+    }
+
+    a {
+        line-height: 1.5rem;
+    }
+
+    p {
+        line-height: 1.5;
+    }
+
+    p,
+    li {
+        color: #9B9DAC;
+    }
+
+    h4 {
+        margin-bottom: 1rem;
+        font-size: 14px;
+
+    }
+
+}
+
+.sectionContent {
+    width: 1600px;
+    margin: 0 auto;
+}
