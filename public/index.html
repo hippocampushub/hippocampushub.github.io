@@ -52,8 +52,12 @@
                     </div>
                     <div class="header-submenu" style="display: none;">
                         <a href="#about" class="header-submenu__item">About the hub</a>
-                        <a href="#tools" class="header-submenu__item">Our tools</a>
+                        <a href="#about-explore" class="header-submenu__item">About Explore Models</a>
+                        <a href="#about-build" class="header-submenu__item">About Build Models</a>
                         <a href="https://www.hippocampushub.eu/model/resources" class="header-submenu__item">Resources</a>
+                        <a href="https://www.hippocampushub.eu/model/glossary" class="header-submenu__item">Glossary</a>
+                        <a href="https://www.hippocampushub.eu/model/terms-of-use" class="header-submenu__item">Terms and Conditions</a>
+                        <!-- <a href="#tools" class="header-submenu__item">Our tools</a> -->
                     </div>
                 </button>
 
@@ -193,14 +197,11 @@
                             <a href="https://www.hippocampushub.eu/model/predictions/other-frequencies"
                                 class="header-submenu__item header-submenu-child-item">Other Frequencies</a>
                         </div>
-
-                        <a href="https://www.hippocampushub.eu/model/glossary/" class="header-submenu__item highlight">Glossary</a>
-                        <a href="https://www.hippocampushub.eu/model/resources" class="header-submenu__item highlight">Resources</a>
                     </div>
                 </button>
 
                 <button class="header-nav-button">
-                    <a href="https://www.hippocampushub.eu/model/build">
+                    <a href="https://www.hippocampushub.eu/build/">
                         <span class="header-nav-button__text text-base text-white">Build Models</span>
                     </a>
                     <div class="header-nav-button-arrow">
@@ -222,16 +223,18 @@
                             <a href="https://www.hippocampushub.eu/build/data/electrophysiology" class="header-submenu__item header-submenu-child-item">Electrophysiology</a>
                             <a href="https://www.hippocampushub.eu/build/data/morphology" class="header-submenu__item header-submenu-child-item">Morphologies</a>
                         </div>
+                        <a href="https://www.hippocampushub.eu/build/models" class="header-submenu__item">Models</a>
+                        <a href="https://www.hippocampushub.eu/build/workflows" class="header-submenu__item">Workflows</a>
                     </div>
                 </button>
 
                 <button class="header-contact-button" onclick="document.location.hash='#contact'">Contact Us</button>
             </nav>
-            <button class="hamburger-menu">
+            <!-- <button class="hamburger-menu">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+            </button> -->
         </div>
     </header>
 
@@ -383,7 +386,7 @@ function revealHeroVideo() {
                             class="h-3.5 w-auto" />
                         <img width="130" height="25" src="./asset/svg/bbp-logo.svg" alt="BBP Logo" class="h-6 w-auto" />
                     </div>
-                    <h3 class="text-2xl sm:text-3xl mb-4">Explore Models</h3>
+                    <a name="about-explore"><h3 class="text-2xl sm:text-3xl mb-4">Explore Models</h3></a>
                     <p class="text-base sm:text-lg mb-8 lg:mb-12">
                         Explore resources for building detailed hippocampal models, with tools for collaborative
                         creation and visualization in an open-access environment. Utilize neural data from platforms
@@ -412,7 +415,7 @@ function revealHeroVideo() {
                         <div class="flex flex-row gap-4 mb-4">
                             <img width="254" height="28" src="./asset/svg/cnr-logo.light.svg" alt="CNR Logo" class="h-7 w-auto" />
                         </div>
-                        <h3 class="text-2xl sm:text-3xl mb-4">Build Models</h3>
+                        <a name="about-build"><h3 class="text-2xl sm:text-3xl mb-4">Build Models</h3></a>
                         <p class="text-base sm:text-lg mb-8 lg:mb-12">
                             Access the data behind published models, review model artifacts, and browse validation results —
                             all without needing to download files or install software. You can also run in silico
@@ -497,7 +500,7 @@ function getInTouch() {
                 <div class="col-span-2 col-start-6 col-end-8">
                     <ul class="list-none p-0">
                         <li class="mb-2">
-                            <a data-type="link" href="https://www.hippocampushub.eu/model/terms-of-use/" class="text-white hover:underline">
+                            <a data-type="link" href="https://www.hippocampushub.eu/model/terms-of-use" class="text-white hover:underline">
                             Terms of Use
                             </a>
                         </li>
