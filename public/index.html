@@ -10,7 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
     <script src="./js/header.js"></script>
-    <style>
+    <style>        
 .tools-section {
     display: flex;
     flex-wrap: wrap;
@@ -34,203 +34,205 @@
 
     <!-- Header -->
     <header class="header">
-        <a class="header-logo flex gap-2" href="https://www.hippocampushub.eu/">
-            <p class="text-xl text-white">The Hippocampus Hub</p>
-        </a>
-        <nav class="header-nav flex flex-row">
+        <div>
+            <a class="header-logo flex gap-2" href="https://www.hippocampushub.eu/">
+                <p class="text-xl text-white">The Hippocampus Hub</p>
+            </a>
+            <nav class="header-nav flex flex-row">
 
-            <button class="header-nav-button">
-                <a href="#">
-                    <span class="header-nav-button__text text-base text-white">Home</span>
-                </a>
-                <div class="header-nav-button-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-4" style="color: white;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                </div>
-                <div class="header-submenu" style="display: none;">
-                    <a href="#about" class="header-submenu__item">About the hub</a>
-                    <a href="#tools" class="header-submenu__item">Our tools</a>
-                    <a href="https://www.hippocampushub.eu/model/resources" class="header-submenu__item">Resources</a>
-                </div>
+                <button class="header-nav-button">
+                    <a href="#">
+                        <span class="header-nav-button__text text-base text-white">Home</span>
+                    </a>
+                    <div class="header-nav-button-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4" style="color: white;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div class="header-submenu" style="display: none;">
+                        <a href="#about" class="header-submenu__item">About the hub</a>
+                        <a href="#tools" class="header-submenu__item">Our tools</a>
+                        <a href="https://www.hippocampushub.eu/model/resources" class="header-submenu__item">Resources</a>
+                    </div>
+                </button>
+
+                <button class="header-nav-button">
+                    <a href="https://www.hippocampushub.eu/model/">
+                        <span class="header-nav-button__text text-base text-white">Explore Models</span>
+                    </a>
+                    <div class="header-nav-button-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4" style="color: white;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div class="header-submenu" style="display: none;">
+
+
+                        <a href="#" class="header-submenu__item header-submenu__collapsible theme-1">
+                            <span>Experimental Data</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 submenu-arrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                        <div class="header-submenu-children">
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/layer-anatomy"
+                                class="header-submenu__item header-submenu-child-item">Layer Anatomy</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/neuronal-morphology"
+                                class="header-submenu__item header-submenu-child-item">Neuronal Morphology</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/neuronal-electrophysiology"
+                                class="header-submenu__item header-submenu-child-item">Neuronal Electrophysiology</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/cell-density"
+                                class="header-submenu__item header-submenu-child-item">Cell Density</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/connection-anatomy"
+                                class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/connection-physiology"
+                                class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/connection-physiology"
+                                class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/schaffer-collaterals"
+                                class="header-submenu__item header-submenu-child-item">Minis</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/minis"
+                                class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
+                            <a href="https://www.hippocampushub.eu/model/experimental-data/theta"
+                                class="header-submenu__item header-submenu-child-item">Theta</a>
+                        </div>
+
+                        <a href="#" class="header-submenu__item header-submenu__collapsible theme-2">
+                            <span>Reconstruction Data</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 submenu-arrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                        <div class="header-submenu-children">
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/volume"
+                                class="header-submenu__item header-submenu-child-item">Volume</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/cell-composition"
+                                class="header-submenu__item header-submenu-child-item">Cell composition</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/morphology-library"
+                                class="header-submenu__item header-submenu-child-item">Morphology Library</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/neuron-models"
+                                class="header-submenu__item header-submenu-child-item">Neuron Models</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/neuron-model-library"
+                                class="header-submenu__item header-submenu-child-item">Neuron Model Library</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/connection-anatomy"
+                                class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/connection-physiology"
+                                class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/schaffer-collaterals"
+                                class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
+                            <a href="https://www.hippocampushub.eu/model/reconstruction-data/acetylcholine"
+                                class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
+                        </div>
+
+                        <a href="#" class="header-submenu__item header-submenu__collapsible theme-3">
+                            <span>Digital Reconstruction</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 submenu-arrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                        <div class="header-submenu-children">
+                            <a href="https://www.hippocampushub.eu/model/digital-reconstructions/region"
+                                class="header-submenu__item header-submenu-child-item">Region</a>
+                            <a href="https://www.hippocampushub.eu/model/digital-reconstructions/schaffer-collaterals"
+                                class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
+                            <a href="https://www.hippocampushub.eu/model/digital-reconstructions/connection-anatomy"
+                                class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
+                            <a href="https://www.hippocampushub.eu/model/digital-reconstructions/connection-physiology"
+                                class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
+                            <a href="https://www.hippocampushub.eu/model/digital-reconstructions/neurons"
+                                class="header-submenu__item header-submenu-child-item">Neurons</a>
+                            <a href="https://www.hippocampushub.eu/model/digital-reconstructions/acetylcholine-effects-on-cells"
+                                class="header-submenu__item header-submenu-child-item">Acetylcholine Effects on Cells</a>
+                            <a href="https://www.hippocampushub.eu/model/digital-reconstructions/acetylcholine-effects-on-synapses"
+                                class="header-submenu__item header-submenu-child-item">Acetylcholine Effects on Synapses</a>
+                        </div>
+
+                        <a href="#" class="header-submenu__item header-submenu__collapsible theme-4">
+                            <span>Validations</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 submenu-arrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                        <div class="header-submenu-children">
+                            <a href="https://www.hippocampushub.eu/model/validations/neurons"
+                                class="header-submenu__item header-submenu-child-item">Neurons</a>
+                            <a href="https://www.hippocampushub.eu/model/validations/connection-anatomy"
+                                class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
+                            <a href="https://www.hippocampushub.eu/model/validations/connection-physiology"
+                                class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
+                            <a href="https://www.hippocampushub.eu/model/validations/schaffer-collaterals-1"
+                                class="header-submenu__item header-submenu-child-item">Schaffer collaterals 1</a>
+                            <a href="https://www.hippocampushub.eu/model/validations/schaffer-collaterals-2"
+                                class="header-submenu__item header-submenu-child-item">Schaffer collaterals 2</a>
+                            <a href="https://www.hippocampushub.eu/model/validations/acetylcholine"
+                                class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
+                        </div>
+
+                        <a href="#" class="header-submenu__item header-submenu__collapsible theme-5">
+                            <span>Predictions</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 submenu-arrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                        <div class="header-submenu-children">
+                            <a href="https://www.hippocampushub.eu/model/predictions/spontaneouns-activity"
+                                class="header-submenu__item header-submenu-child-item">Spontaneous Activity</a>
+                            <a href="https://www.hippocampushub.eu/model/predictions/voltage"
+                                class="header-submenu__item header-submenu-child-item">Voltage - Calcium Scan</a>
+                            <a href="https://www.hippocampushub.eu/model/predictions/theta-oscillatory-input"
+                                class="header-submenu__item header-submenu-child-item">Theta - Oscillatory input</a>
+                            <a href="https://www.hippocampushub.eu/model/predictions/theta-ms-input"
+                                class="header-submenu__item header-submenu-child-item">Theta - MS input</a>
+                            <a href="https://www.hippocampushub.eu/model/predictions/other-frequencies"
+                                class="header-submenu__item header-submenu-child-item">Other Frequencies</a>
+                        </div>
+
+                        <a href="https://www.hippocampushub.eu/model/glossary/" class="header-submenu__item highlight">Glossary</a>
+                        <a href="https://www.hippocampushub.eu/model/resources" class="header-submenu__item highlight">Resources</a>
+                    </div>
+                </button>
+
+                <button class="header-nav-button">
+                    <a href="https://www.hippocampushub.eu/model/build">
+                        <span class="header-nav-button__text text-base text-white">Build Models</span>
+                    </a>
+                    <div class="header-nav-button-arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-4" style="color: white;">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </div>
+                    <div class="header-submenu" style="display: none;">
+                        <a href="#" class="header-submenu__item header-submenu__collapsible">
+                            <span>Data</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-4 submenu-arrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </a>
+                        <div class="header-submenu-children">
+                            <a href="https://www.hippocampushub.eu/build/data/connection" class="header-submenu__item header-submenu-child-item">Connections</a>
+                            <a href="https://www.hippocampushub.eu/build/data/electrophysiology" class="header-submenu__item header-submenu-child-item">Electrophysiology</a>
+                            <a href="https://www.hippocampushub.eu/build/data/morphology" class="header-submenu__item header-submenu-child-item">Morphologies</a>
+                        </div>
+                    </div>
+                </button>
+
+                <button class="header-contact-button" onclick="document.location.hash='#contact'">Contact Us</button>
+            </nav>
+            <button class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
-
-            <button class="header-nav-button">
-                <!-- <a href="https://www.hippocampushub.eu/model/"> -->
-                    <span class="header-nav-button__text text-base text-white">Explore Models</span>
-                <!-- </a> -->
-                <div class="header-nav-button-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-4" style="color: white;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                </div>
-                <div class="header-submenu" style="display: none;">
-
-
-                    <a href="#" class="header-submenu__item header-submenu__collapsible theme-1">
-                        <span>Experimental Data</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4 submenu-arrow">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </a>
-                    <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/layer-anatomy"
-                            class="header-submenu__item header-submenu-child-item">Layer Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/neuronal-morphology"
-                            class="header-submenu__item header-submenu-child-item">Neuronal Morphology</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/neuronal-electrophysiology"
-                            class="header-submenu__item header-submenu-child-item">Neuronal Electrophysiology</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/cell-density"
-                            class="header-submenu__item header-submenu-child-item">Cell Density</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/connection-anatomy"
-                            class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/connection-physiology"
-                            class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/connection-physiology"
-                            class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/schaffer-collaterals"
-                            class="header-submenu__item header-submenu-child-item">Minis</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/minis"
-                            class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
-                        <a href="https://www.hippocampushub.eu/model/experimental-data/theta"
-                            class="header-submenu__item header-submenu-child-item">Theta</a>
-                    </div>
-
-                    <a href="#" class="header-submenu__item header-submenu__collapsible theme-2">
-                        <span>Reconstruction Data</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4 submenu-arrow">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </a>
-                    <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/volume"
-                            class="header-submenu__item header-submenu-child-item">Volume</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/cell-composition"
-                            class="header-submenu__item header-submenu-child-item">Cell composition</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/morphology-library"
-                            class="header-submenu__item header-submenu-child-item">Morphology Library</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/neuron-models"
-                            class="header-submenu__item header-submenu-child-item">Neuron Models</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/neuron-model-library"
-                            class="header-submenu__item header-submenu-child-item">Neuron Model Library</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/connection-anatomy"
-                            class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/connection-physiology"
-                            class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/schaffer-collaterals"
-                            class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
-                        <a href="https://www.hippocampushub.eu/model/reconstruction-data/acetylcholine"
-                            class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
-                    </div>
-
-                    <a href="#" class="header-submenu__item header-submenu__collapsible theme-3">
-                        <span>Digital Reconstruction</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4 submenu-arrow">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </a>
-                    <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/region"
-                            class="header-submenu__item header-submenu-child-item">Region</a>
-                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/schaffer-collaterals"
-                            class="header-submenu__item header-submenu-child-item">Schaffer Collaterals</a>
-                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/connection-anatomy"
-                            class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/connection-physiology"
-                            class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/neurons"
-                            class="header-submenu__item header-submenu-child-item">Neurons</a>
-                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/acetylcholine-effects-on-cells"
-                            class="header-submenu__item header-submenu-child-item">Acetylcholine Effects on Cells</a>
-                        <a href="https://www.hippocampushub.eu/model/digital-reconstructions/acetylcholine-effects-on-synapses"
-                            class="header-submenu__item header-submenu-child-item">Acetylcholine Effects on Synapses</a>
-                    </div>
-
-                    <a href="#" class="header-submenu__item header-submenu__collapsible theme-4">
-                        <span>Validations</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4 submenu-arrow">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </a>
-                    <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/model/validations/neurons"
-                            class="header-submenu__item header-submenu-child-item">Neurons</a>
-                        <a href="https://www.hippocampushub.eu/model/validations/connection-anatomy"
-                            class="header-submenu__item header-submenu-child-item">Connection Anatomy</a>
-                        <a href="https://www.hippocampushub.eu/model/validations/connection-physiology"
-                            class="header-submenu__item header-submenu-child-item">Connection Physiology</a>
-                        <a href="https://www.hippocampushub.eu/model/validations/schaffer-collaterals-1"
-                            class="header-submenu__item header-submenu-child-item">Schaffer collaterals 1</a>
-                        <a href="https://www.hippocampushub.eu/model/validations/schaffer-collaterals-2"
-                            class="header-submenu__item header-submenu-child-item">Schaffer collaterals 2</a>
-                        <a href="https://www.hippocampushub.eu/model/validations/acetylcholine"
-                            class="header-submenu__item header-submenu-child-item">Acetylcholine</a>
-                    </div>
-
-                    <a href="#" class="header-submenu__item header-submenu__collapsible theme-5">
-                        <span>Predictions</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4 submenu-arrow">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </a>
-                    <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/model/predictions/spontaneouns-activity"
-                            class="header-submenu__item header-submenu-child-item">Spontaneous Activity</a>
-                        <a href="https://www.hippocampushub.eu/model/predictions/voltage"
-                            class="header-submenu__item header-submenu-child-item">Voltage - Calcium Scan</a>
-                        <a href="https://www.hippocampushub.eu/model/predictions/theta-oscillatory-input"
-                            class="header-submenu__item header-submenu-child-item">Theta - Oscillatory input</a>
-                        <a href="https://www.hippocampushub.eu/model/predictions/theta-ms-input"
-                            class="header-submenu__item header-submenu-child-item">Theta - MS input</a>
-                        <a href="https://www.hippocampushub.eu/model/predictions/other-frequencies"
-                            class="header-submenu__item header-submenu-child-item">Other Frequencies</a>
-                    </div>
-
-                    <a href="https://www.hippocampushub.eu/model/glossary/" class="header-submenu__item highlight">Glossary</a>
-                    <a href="https://www.hippocampushub.eu/model/resources" class="header-submenu__item highlight">Resources</a>
-                </div>
-            </button>
-
-            <button class="header-nav-button">
-                <!-- <a href="https://www.hippocampushub.eu/model/build"> -->
-                    <span class="header-nav-button__text text-base text-white">Build Models</span>
-                <!-- </a> -->
-                <div class="header-nav-button-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                        stroke="currentColor" class="size-4" style="color: white;">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                    </svg>
-                </div>
-                <div class="header-submenu" style="display: none;">
-                    <a href="#" class="header-submenu__item header-submenu__collapsible">
-                        <span>Data</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" class="size-4 submenu-arrow">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
-                        </svg>
-                    </a>
-                    <div class="header-submenu-children">
-                        <a href="https://www.hippocampushub.eu/build/data/connection" class="header-submenu__item header-submenu-child-item">Connections</a>
-                        <a href="https://www.hippocampushub.eu/build/data/electrophysiology" class="header-submenu__item header-submenu-child-item">Electrophysiology</a>
-                        <a href="https://www.hippocampushub.eu/build/data/morphology" class="header-submenu__item header-submenu-child-item">Morphologies</a>
-                    </div>
-                </div>
-            </button>
-
-            <button class="header-contact-button" onclick="document.location.hash='#contact'">Contact Us</button>
-        </nav>
-        <button class="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        </div>
     </header>
 
     <!-- Hero -->
