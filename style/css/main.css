@@ -1,16 +1,23 @@
 .header {
+    padding: 20px 3rem;
+    z-index: 999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    transition: all 0.1s ease-in-out;
+}
+
+.header > div {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: space-between;
-    position: fixed;
-    width: 100vw;
-    border-bottom: 1px solid rgba(255, 255, 255, 0);
-    transition: all 0.1s ease-in-out;
-
-    padding: 30px 3rem;
-    z-index: 999;
+    width: 100%;
+    max-width: 1600px;
 }
 
 .header.scrolled {
@@ -176,17 +183,20 @@
 
 .header-contact-button {
     background-color: rgba(255, 255, 255, 0.1);
+    background-color: #52617d;
     border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     padding: 5px 20px;
+    padding: 0.4rem 0.6rem;
     margin: 5px 0;
     margin-left: 15px;
-    border-radius: 3px;
+    border-radius: 1px;
     transition: background-color 0.3s ease;
 }
 
 .header-contact-button:hover {
     background-color: rgba(255, 255, 255, 0.3);
+    background-color: #3b4165;
 }
 
 .hamburger-menu {
@@ -222,6 +232,11 @@
 
 .hamburger-menu.open span:nth-child(3) {
     transform: rotate(-45deg);
+}
+
+.header-nav {
+    font-size: 16px;
+    gap: 0.2em;
 }
 
 @media (max-width: 768px) {
@@ -1275,7 +1290,8 @@ video {
 
 @font-face {
     font-family: "Titillium Web";
-    src: url("/public/asset/fonts/TitilliumWeb-Regular.ttf") format("truetype");
+    /* src: url("/public/asset/fonts/TitilliumWeb-Regular.ttf") format("truetype"); */
+    src: url("https://fonts.gstatic.com/s/titilliumweb/v17/NaPecZTIAOhVxoMyOr9n_E7fdMPmDaZRbrw.woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -1292,6 +1308,8 @@ body {
     font-family: "Titillium Web", sans-serif;
     overflow-x: hidden;
     background-color: #020018;
+    font-size: 16px;
+    color: #f7f8fc;
 }
 
 html {
@@ -1342,9 +1360,6 @@ html {
 
 .section {
     width: 100svw;
-}
-
-.section .section--blue {
 }
 
 .section.grey {
@@ -1701,4 +1716,8 @@ canvas {
     .xl\:col-end-8 {
         grid-column-end: 8;
     }
+}
+
+.header-nav-button__text.text-base {
+    font-size: 16px;
 }
